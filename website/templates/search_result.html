@@ -16,57 +16,38 @@
         </div>
         </div>
         <div class="row justify-content-center text-left separator">
-        {% for place in Places %}
-            <table class="square">
+        {% for place in places %}
+        <div class="col-12 separator-table"></div>
+            <table class="square border border-light">
                 <tr>
                     <td class="left-cell">
                     <div>
-                        <strong>{{place.name}}</strong>
-                        <br>
-                        {{place.description|safe|truncatewords:"50"|linebreaks}}
-
+                        <div class="place-name">
+                            <h6 >
+                                <strong>{{place.name}}</strong>
+                            </h6>
+                        </div>
+                        <div class="place-description">
+                            <p >
+                                {{place.description|safe|truncatewords:"50"|linebreaks}}
+                            </p>
+                        </div>
+                        <div class="page-details">
+                            <a href="">place details</a>
+                        </div>
                     </div>
                     </td>
-                    <td>
+                    <td class="text-center">
                     <div>
-                        Location:
-                        <iframe src="{{place.maps}}" width="200" height="75" frameborder="0" style="border:0" allowfullscreen></iframe>
+                        <p class="text-location">Location:</p>
+                        
+                        <iframe src="{{place.maps}}" width="300" height="75" frameborder="0" style="border:0" allowfullscreen class="mapsed"></iframe>
                     </div>
-                </td>
+                    </td>
                 </tr>
             </table>
         {% endfor %}
         </div>
     </div>
 </div>
-<!-- <div class="container ">
-    <div class="row justify-content-center">
-        <div class="col-6">
-            <h4>Search Result for "input from search field"</h4>
-        </div>
-    </div>
-    <div class="row justify-content-center">
-        {% for place in Places %}
-        <div class="col-7 ">
-            <table class="square border border-dark search-result">
-                <tr >
-                    <td>
-                    <div class="text-result">
-                        <p >{{place.name}}</p>
-                    </div>
-                    </td>
-                    <td>
-                    <div>
-                        <div>
-                            <p>Location:</p>
-                        </div>
-                        <iframe src="{{place.maps}}" width="200" height="75" frameborder="0" style="border:0" allowfullscreen></iframe>
-                    </div>
-                    </td>
-                </tr>
-            </table>
-        </div>        
-        {% endfor %}
-    </div>
-</div> -->
 {% endblock %}

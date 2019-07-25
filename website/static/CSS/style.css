@@ -2,6 +2,7 @@
 header{
     padding: 0px 0px;
     background: #6d6b6b;
+    height: 72px;
 }
 
 .inline{
@@ -10,8 +11,12 @@ header{
 
 .headerForm{
     padding-top: 20px;
+    color: white;
 }
 
+.logo-img {
+    padding-top: 10px;
+}
 /* global */
 .white{
     color: white;
@@ -48,12 +53,15 @@ body{
 }
 
 .before-text {
-    margin-top: 20px;
+    margin-top: 100px;
 }
 
 .square {
-    background-color: white;
+    background-color: rgba(255, 255, 255, 0.6);
     margin-top: 10px;
+    height: 180px;
+    width: 1200px;
+        
 }
 
 .text-result {
@@ -69,5 +77,35 @@ body{
 }
 
 .left-cell {
-    padding-right: 10px;
+    width: 1000px;
+}
+
+.separator-table {
+    margin-top: 10px;
+}
+
+.text-location {
+    padding-right: 130px;
+}
+
+.place-name {
+    margin-top: 10px;
+    margin-left: 15px;
+
+}
+
+.border {
+    border: 2px solid #6D6B6B !important;
+}
+
+.place-description {
+    margin-left: 15px !important;
+}
+
+.mapsed {
+    margin-left: 100px !important;
+}
+
+.page-details {
+    margin-left: 15px;
 }
