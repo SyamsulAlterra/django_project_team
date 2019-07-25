@@ -42,3 +42,32 @@ body{
     width: 300px;
     margin-bottom: 20px;
 }
+
+.search-result {
+    background-color: white;
+}
+
+.before-text {
+    margin-top: 20px;
+}
+
+.square {
+    background-color: white;
+    margin-top: 10px;
+}
+
+.text-result {
+    padding-top: 0px;
+}
+
+.border {
+    border: 10px solid grey;
+}
+
+.table-cell {
+    vertical-align: top;
+}
+
+.left-cell {
+    padding-right: 10px;
+}
