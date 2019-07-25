@@ -7,9 +7,11 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="{% static 'CSS/bootstrap.min.css' %}">
     <link rel="stylesheet" href="{% static 'CSS/style.css' %}">
-    <title>Document</title>
+    {% block head %}
+    {% endblock %}
 </head>
 <body>
-    
+    {% block body %}
+    {% endblock %}
 </body>
 </html>
