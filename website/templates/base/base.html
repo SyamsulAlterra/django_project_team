@@ -10,6 +10,22 @@
     {% block head %}
     {% endblock %}
 </head>
+<header>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-4 aligncenter">
+                <img src="" alt="">
+            </div>
+            <div class="col-4 aligncenter">
+                <input type="text" name="header_search" id="header_search">
+                <label for="header_search" class="white"> Cari </label>
+            </div>
+            <div class="col-4 aligncenter">
+                <a href="{% url 'homepage' %}" class="white"> Home </a>
+            </div>
+        </div>
+    </div>
+</header>
 <body>
     {% block body %}
     {% endblock %}

@@ -1,0 +1,36 @@
+/* header css */
+header{
+    padding: 10px 0px;
+    background: rgb(44, 43, 43);
+}
+
+/* global */
+.white{
+    color: white;
+}
+
+body{
+    background-image: url(../IMG/pattern_background.jpg);
+}
+
+.aligncenter{
+    text-align: center;
+}
+
+/* homepage css */
+.box{
+    background-color: rgb(73, 73, 73);
+    width: 40%;
+    height: 400px;
+    display: table;
+    border-radius: 30px;
+    margin:40px;
+}
+
+
+.box input{
+    border-radius: 10px;
+    padding: 5px 20px;
+    width: 300px;
+    margin-bottom: 20px;
+}
