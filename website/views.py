@@ -1,6 +1,22 @@
-from django.shortcuts import render,redirect
+from django.shortcuts import render,redirect, get_object_or_404
 from .forms import *
 from .models import *
+
+def detail(request, place_id):
+    # Generate counts of some of the main objects
+    tempat = Places.objects.get(pk=place_id)
+    # namaTempat=tempat.cleaned_data['name']
+    gambar = Photos.objects.all().filter(place_name_id=tempat.id) 
+    # place_name_id adalah variabel foreign_key
+    # gambar = Photos.objects.filter(place_name__contains='Malang')
+    testi = Review.objects.all().filter(place_name_id=tempat.id) 
+    context = {
+        'tempat': tempat,
+        'gambar': gambar,
+        'testi': testi
+        }
+    
+    return render(request, 'detail.html', context=context)
 
 
 def homepage(request):
@@ -42,4 +58,3 @@ def location_form(request):
         string = location_to_search()
 
     return render(request, 'location_form.html', {'data':data, 'string':string})
-

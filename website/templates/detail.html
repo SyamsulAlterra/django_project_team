@@ -1,0 +1,60 @@
+{% extends 'base/base.html' %}
+{% block body %}
+
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-12 nama_tempat text-center">
+        <h1>{{tempat.name}}<h1>
+        </div>
+    <br>
+    <br>    
+    <div class="row justify-content-center my_carousel">
+        <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+                {% for poto in gambar %}
+                    {% if forloop.first %}
+                        <div class="carousel-item active">
+                    {% else %}
+                        <div class="carousel-item">
+                    {% endif %}
+                        <img src="{{poto.pic_url}}" class="d-block" alt="..." height="200px" width="500px">
+                        </div> 
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+    <br>
+    <br>
+    <div class="row justify-content-center">
+        <div class="col-md-6 place_desc">
+            <p>{{tempat.description}}</p>
+        </div>
+    </div>
+    <br>
+    <br>
+    <div class="row justify-content-center">
+        <div class="gambar_map">
+            <iframe src="{{tempat.maps}}" class="map_desc"></iframe>
+        </div>
+    </div>
+    <div class="review">
+        <div class="row">
+            <h2>Review</h2>
+        </div>
+        
+        {% for data in testi %}
+        <div class="row justify-content-center border border-light testimoni">
+            <div class="col-md-12">
+                <p>{{data.review}}</p>
+            </div>
+        </div> 
+        {% endfor %}
+    </div>
+    
+</div>
+{% endblock %}
+
+                        
+<div class="row review_section">
+        <h2>Review</h2>
+    </div>

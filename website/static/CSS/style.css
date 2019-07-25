@@ -48,6 +48,28 @@ body{
     margin-bottom: 20px;
 }
 
+
+.nama_tempat {
+    margin: 20px;
+    padding: 10px;
+}
+
+.my_carousel {
+    margin: 20px;
+    padding: 10px;
+}
+
+.testimoni {
+    background-color: rgba(255, 255, 255, 0.6);
+    height: 100px;
+    width: 1200px;
+}
+
+.review {
+    padding: 10px;
+    margin-top: 40px;
+}
+
 .search-result {
     background-color: white;
 }
@@ -108,4 +130,5 @@ body{
 
 .page-details {
     margin-left: 15px;
+
 }
