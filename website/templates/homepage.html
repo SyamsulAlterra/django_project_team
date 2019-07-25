@@ -17,9 +17,9 @@
                     <tbody>
                         <tr>
                             <td class="aligncenter align-middle">
-                                <form action="" method="post">{% csrf_token %}
-                                    <label for="search_location">Enter location : </label><br>
-                                    <input class="input" type="text" name="search_location" id="search_location"><br>
+                                <form action="" method="POST">{% csrf_token %}
+                                    {{string.as_p}}
+                                    <!-- <input class="input" type="text" name="search_location" id="search_location"><br> -->
                                     <button type="submit">search</button>
                                 </form>
                             </td>
