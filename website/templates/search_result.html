@@ -1,0 +1,53 @@
+{% extends 'base/base.html' %}
+
+{% block head %}
+<title>Search Result</title>
+{% endblock %}
+
+{% block body %}
+{% load static %}
+<div class="container home-content">
+    <div class="row justify-content-center text-center">
+        <div class="col-12">
+            <div>
+                <h4 class="before-text">
+                    Search result:
+                </h4>
+        </div>
+        </div>
+        <div class="row justify-content-center text-left separator">
+        {% for place in places %}
+        <div class="col-12 separator-table"></div>
+            <table class="square border border-light">
+                <tr>
+                    <td class="left-cell">
+                    <div>
+                        <div class="place-name">
+                            <h6 >
+                                <strong>{{place.name}}</strong>
+                            </h6>
+                        </div>
+                        <div class="place-description">
+                            <p >
+                                {{place.description|safe|truncatewords:"50"|linebreaks}}
+                            </p>
+                        </div>
+                        <div class="page-details">
+                            <a href="">place details</a>
+                        </div>
+                    </div>
+                    </td>
+                    <td class="text-center">
+                    <div>
+                        <p class="text-location">Location:</p>
+                        
+                        <iframe src="{{place.maps}}" width="300" height="75" frameborder="0" style="border:0" allowfullscreen class="mapsed"></iframe>
+                    </div>
+                    </td>
+                </tr>
+            </table>
+        {% endfor %}
+        </div>
+    </div>
+</div>
+{% endblock %}

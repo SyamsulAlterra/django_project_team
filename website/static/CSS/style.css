@@ -1,9 +1,22 @@
 /* header css */
 header{
-    padding: 10px 0px;
-    background: rgb(44, 43, 43);
+    padding: 0px 0px;
+    background: #6d6b6b;
+    height: 72px;
 }
 
+.inline{
+    display: inline;
+}
+
+.headerForm{
+    padding-top: 20px;
+    color: white;
+}
+
+.logo-img {
+    padding-top: 10px;
+}
 /* global */
 .white{
     color: white;
@@ -35,6 +48,7 @@ body{
     margin-bottom: 20px;
 }
 
+
 .nama_tempat {
     margin: 20px;
     padding: 10px;
@@ -54,4 +68,67 @@ body{
 .review {
     padding: 10px;
     margin-top: 40px;
+}
+
+.search-result {
+    background-color: white;
+}
+
+.before-text {
+    margin-top: 100px;
+}
+
+.square {
+    background-color: rgba(255, 255, 255, 0.6);
+    margin-top: 10px;
+    height: 180px;
+    width: 1200px;
+        
+}
+
+.text-result {
+    padding-top: 0px;
+}
+
+.border {
+    border: 10px solid grey;
+}
+
+.table-cell {
+    vertical-align: top;
+}
+
+.left-cell {
+    width: 1000px;
+}
+
+.separator-table {
+    margin-top: 10px;
+}
+
+.text-location {
+    padding-right: 130px;
+}
+
+.place-name {
+    margin-top: 10px;
+    margin-left: 15px;
+
+}
+
+.border {
+    border: 2px solid #6D6B6B !important;
+}
+
+.place-description {
+    margin-left: 15px !important;
+}
+
+.mapsed {
+    margin-left: 100px !important;
+}
+
+.page-details {
+    margin-left: 15px;
+
 }

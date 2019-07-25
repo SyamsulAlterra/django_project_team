@@ -18,18 +18,28 @@
         {% endblock %} 
     </title>
 </head>
-<header>
+<header class="fixed-top">
     <div class="container-fluid">
         <div class="row">
             <div class="col-4 aligncenter">
-                <img src="" alt="">
+                <img src="http://radar.oreilly.com/foursquare-logo.png" alt="" width="200px" class="logo-img">
             </div>
             <div class="col-4 aligncenter">
-                <input type="text" name="header_search" id="header_search">
-                <label for="header_search" class="white"> Cari </label>
+                <form action="" method="post" class="headerForm">{% csrf_token %}
+                    <ul class="list-unstyled">
+                        <li class="list-inline-item" >
+                            {{string.as_p}}
+                        </li>
+                        <li class="list-inline-item" >
+                            <button type="submit">cari</button>
+                        </li>
+                    </ul>
+                </form>
             </div>
             <div class="col-4 aligncenter">
-                <a href="{% url 'homepage' %}" class="white"> Home </a>
+                <div class="headerForm">
+                    <a href="{% url 'homepage' %}" class="white"> Home </a>
+                </div>
             </div>
         </div>
     </div>
