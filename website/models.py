@@ -4,7 +4,7 @@ from django.db import models
 class Places(models.Model):
     name = models.CharField(max_length=255, help_text="Insert place name")
     description = models.TextField(max_length=1000, help_text="Insert place descriptions")
-    maps = models.CharField(max_length=500, help_text='Insert html script from google maps')
+    maps = models.TextField(max_length=500, help_text='Only insert src script from html embed')
 
     def __str__(self):
         return self.name
