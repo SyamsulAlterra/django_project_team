@@ -1,7 +1,15 @@
 /* header css */
 header{
-    padding: 10px 0px;
-    background: rgb(44, 43, 43);
+    padding: 0px 0px;
+    background: #6d6b6b;
+}
+
+.inline{
+    display: inline;
+}
+
+.headerForm{
+    padding-top: 20px;
 }
 
 /* global */
