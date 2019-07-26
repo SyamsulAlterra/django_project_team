@@ -3,6 +3,16 @@ from .forms import *
 from .models import *
 
 def detail(request, place_id):
+
+    if request.method=='POST':
+        string = location_to_search(request.POST)
+        if string.is_valid():
+            target=string.cleaned_data['location']
+            filter_places=Places.objects.all().filter(name__contains=target)
+            return render(request, 'search_result.html', {'places':filter_places, 'string':string})
+    else:
+        string = location_to_search()
+
     # Generate counts of some of the main objects
     tempat = Places.objects.get(pk=place_id)
     # namaTempat=tempat.cleaned_data['name']
@@ -13,7 +23,8 @@ def detail(request, place_id):
     context = {
         'tempat': tempat,
         'gambar': gambar,
-        'testi': testi
+        'testi': testi,
+        'string': string,
         }
     
     return render(request, 'detail.html', context=context)
