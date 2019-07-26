@@ -1,0 +1,14 @@
+{% extends 'base/base.html' %}
+
+{% block head %}
+<title>Result</title>
+{% endblock %}
+
+{% block body %}
+<div class="body-form">
+    <form action="" method="post">{% csrf_token %}
+        {{ data.as_p }}
+        <button type="submit" class="alegreya">submit</button>
+    </form>
+</div>
+{% endblock %}

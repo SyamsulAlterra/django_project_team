@@ -43,16 +43,16 @@ def homepage(request):
     return render(request, 'homepage.html', {'string':string} )
 
 #fungsi manggil result
-def result(request):
-    request.session.pop(['string'],{})
-    if request.method=='POST':
-        string = location_to_search(request.POST)
-        if string.is_valid():
-            return render(request, 'search_result.html', {'string':string})
-    else:
-        string = location_to_search()
+# def result(request):
+#     # request.session.pop(['string'],{})
+#     if request.method=='POST':
+#         string = location_to_search(request.POST)
+#         if string.is_valid():
+#             return render(request, 'search_result.html', {'string':string})
+#     else:
+#         string = location_to_search()
         
-    return render(request, 'search_result.html', {'string':string})
+#     return render(request, 'search_result.html', {'string':string})
 
 def location_form(request):
     if request.method=='POST':
@@ -63,9 +63,48 @@ def location_form(request):
             string = location_to_search()
             return redirect('homepage')
         elif string.is_valid():
-            return redirect('result')
+            target=string.cleaned_data['location']
+            filter_places=Places.objects.all().filter(name__contains=target)
+            return render(request, 'search_result.html', {'places':filter_places, 'string':string})
     else:
         data = input_location()
         string = location_to_search()
 
     return render(request, 'location_form.html', {'data':data, 'string':string})
+
+
+def photo_form(request):
+    if request.method=='POST':
+        data = input_photo(request.POST)
+        string = location_to_search(request.POST)
+        if data.is_valid():
+            data.save()
+            string = location_to_search()
+            return redirect('homepage')
+        elif string.is_valid():
+            target=string.cleaned_data['location']
+            filter_places=Places.objects.all().filter(name__contains=target)
+            return render(request, 'search_result.html', {'places':filter_places, 'string':string})
+    else:
+        data = input_photo()
+        string = location_to_search()
+
+    return render(request, 'photo_form.html', {'data':data, 'string':string})
+
+def review_form(request):
+    if request.method=='POST':
+        data = input_review(request.POST)
+        string = location_to_search(request.POST)
+        if data.is_valid():
+            data.save()
+            string = location_to_search()
+            return redirect('homepage')
+        elif string.is_valid():
+            target=string.cleaned_data['location']
+            filter_places=Places.objects.all().filter(name__contains=target)
+            return render(request, 'search_result.html', {'places':filter_places, 'string':string})
+    else:
+        data = input_review()
+        string = location_to_search()
+
+    return render(request, 'review_form.html', {'data':data, 'string':string})
