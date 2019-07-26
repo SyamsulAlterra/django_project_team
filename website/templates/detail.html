@@ -1,4 +1,9 @@
 {% extends 'base/base.html' %}
+
+{% block head %}
+<title>Detail {{ tempat.name }}</title>
+{% endblock %}
+
 {% block body %}
 
 <div class="container">
@@ -64,7 +69,7 @@
 </div>
 <div class="row justify-content-center add-location aligncenter">
         <p class="box">
-            <a href="{% url 'photo form' %}">review this place</a>
+            <a href="{% url 'review form' %}">review this place</a>
         </p>
     </div>
 {% endblock %}
