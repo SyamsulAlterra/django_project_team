@@ -10,7 +10,7 @@
     <div class="row justify-content-center text-center">
         <div class="col-12">
             <div>
-                <h4 class="before-text">
+                <h4 class="before-text alegreya">
                     Search result:
                 </h4>
         </div>
@@ -24,22 +24,22 @@
                     <div>
                         <div class="place-name">
                             <h6 >
-                                <strong>{{place.name}}</strong>
+                                <strong class="alegreya">{{place.name}}</strong>
                             </h6>
                         </div>
                         <div class="place-description">
-                            <p >
+                            <p class="alegreya">
                                 {{place.description|safe|truncatewords:"50"|linebreaks}}
                             </p>
                         </div>
-                        <div class="page-details">
-                            <a href="">place details</a>
+                        <div class="page-details alegreya">
+                            <a href="{% url 'detail' place.id %}">place details</a>
                         </div>
                     </div>
                     </td>
                     <td class="text-center">
                     <div>
-                        <p class="text-location">Location:</p>
+                        <p class="text-location alegreya">Location:</p>
                         
                         <iframe src="{{place.maps}}" width="300" height="75" frameborder="0" style="border:0" allowfullscreen class="mapsed"></iframe>
                     </div>
