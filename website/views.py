@@ -55,9 +55,9 @@ def homepage(request):
 #     return render(request, 'search_result.html', {'string':string})
 
 def location_form(request):
-    if request.method=='POST':
-        data = input_location(request.POST)
-        string = location_to_search(request.POST)
+    if request.method=='GET':
+        data = input_location(request.GET)
+        string = location_to_search(request.GET)
         if data.is_valid():
             data.save()
             string = location_to_search()
@@ -106,5 +106,5 @@ def review_form(request):
     else:
         data = input_review()
         string = location_to_search()
-
-    return render(request, 'review_form.html', {'data':data, 'string':string})
+    
+    return render(request, 'photo_form.html', {'data':data, 'string':string})
