@@ -2,9 +2,12 @@
 {% block body %}
 
 <div class="container">
+    <div class="body-detail">
+
+    </div>
     <div class="row justify-content-center">
         <div class="col-12 nama_tempat text-center">
-        <h1>{{tempat.name}}<h1>
+        <h1 class="alegreya">{{tempat.name}}<h1>
         </div>
     <br>
     <br>    
@@ -27,7 +30,7 @@
     <br>
     <div class="row justify-content-center">
         <div class="col-md-6 place_desc">
-            <p>{{tempat.description}}</p>
+            <p class="alegreya">{{tempat.description}}</p>
         </div>
     </div>
     <br>
@@ -39,13 +42,13 @@
     </div>
     <div class="review">
         <div class="row">
-            <h2>Review</h2>
+            <h2 class="alegreya">Review</h2>
         </div>
         
         {% for data in testi %}
         <div class="row justify-content-center border border-light testimoni">
             <div class="col-md-12">
-                <p>{{data.review}}</p>
+                <p class="alegreya">{{data.review}}</p>
             </div>
         </div> 
         {% endfor %}

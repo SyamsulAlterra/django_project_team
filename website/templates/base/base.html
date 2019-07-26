@@ -13,10 +13,9 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <script src="{% static 'JS/bootstrap.min.js' %}"></script>
     <script src="{% static 'JS/jquery-3.3.1.min.js' %}"></script>
-    <title> 
-        {% block head %}
-        {% endblock %} 
-    </title>
+    {% block head %}
+    {% endblock %} 
+
 </head>
 <header class="fixed-top">
     <div class="container-fluid">
@@ -27,18 +26,18 @@
             <div class="col-4 aligncenter">
                 <form action="" method="post" class="headerForm">{% csrf_token %}
                     <ul class="list-unstyled">
-                        <li class="list-inline-item" >
+                        <li class="list-inline-item white" >
                             {{string.as_p}}
                         </li>
                         <li class="list-inline-item" >
-                            <button type="submit">cari</button>
+                            <button type="submit" class="alegreya">search</button>
                         </li>
                     </ul>
                 </form>
             </div>
             <div class="col-4 aligncenter">
                 <div class="headerForm">
-                    <a href="{% url 'homepage' %}" class="white"> Home </a>
+                    <a href="{% url 'homepage' %}" class="white alegreya"> Home </a>
                 </div>
             </div>
         </div>

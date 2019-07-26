@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Cairo&display=swap');
+
 /* header css */
 header{
     padding: 0px 0px;
@@ -22,8 +24,12 @@ header{
     color: white;
 }
 
+.alegreya{
+    font-family: 'Cairo';
+}
+
 body{
-    background-image: url(../IMG/pattern_background.jpg);
+    background-image: url(../IMG/index.jpeg);
 }
 
 .aligncenter{
@@ -32,14 +38,19 @@ body{
 
 /* homepage css */
 .box{
-    background-color: rgb(73, 73, 73);
+    background-color: none;
     width: 40%;
     height: 400px;
     display: table;
     border-radius: 30px;
     margin:40px;
+    opacity: 1;
 }
 
+.welcome{
+    padding-bottom: 30px;
+    width: 70%;
+}
 
 .box input{
     border-radius: 10px;
@@ -135,5 +146,10 @@ body{
 
 /* location_form body */
 .body-form{
+    padding-top: 100px;
+}
+
+/* detail body */
+.body-detail{
     padding-top: 100px;
 }
