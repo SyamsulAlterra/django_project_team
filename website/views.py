@@ -103,8 +103,6 @@ def review_form(request):
             target=string.cleaned_data['location']
             filter_places=Places.objects.all().filter(name__contains=target)
             return render(request, 'search_result.html', {'places':filter_places, 'string':string})
-    else:
-        data = input_review()
-        string = location_to_search()
-
-    return render(request, 'review_form.html', {'data':data, 'string':string})
+    # else:
+    #     data = input_review()
+    #     string = location_to_search()
