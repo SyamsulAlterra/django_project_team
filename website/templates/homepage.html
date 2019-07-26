@@ -1,0 +1,34 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="{% static 'CSS/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'CSS/style.css' %}">
+    <title>Homepage</title>
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12 d-flex justify-content-center">
+                <table class="box">
+                    <tbody>
+                        <tr>
+                            <td class="aligncenter align-middle">
+                                <form action="" method="POST">{% csrf_token %}
+                                    <img class="welcome" src="https://images.squarespace-cdn.com/content/59d60e2c51a5842e17618fd3/1510948695192-0R7D5E3UDR6FFGWQQ8PG/Welcome+Logo.png?format=1500w&content-type=image%2Fpng" alt="" srcset="">
+                                    {{string.as_p}}
+                                    <!-- <input class="input" type="text" name="search_location" id="search_location"><br> -->
+                                    <button type="submit" class="btn btn-primary alegreya">search</button>
+                                </form>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table> 
+            </div>
+        </div>
+    </div>
+</body>
+</html>
