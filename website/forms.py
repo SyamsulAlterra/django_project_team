@@ -10,3 +10,13 @@ class input_location(forms.ModelForm):
     class Meta:
         model=Places
         fields=('name', 'description', 'maps')
+
+class input_photo(forms.ModelForm):
+    class Meta:
+        model=Photos
+        fields=('place_name','pic_url')
+
+class input_review(forms.ModelForm):
+    class Meta:
+        model=Review
+        fields=('place_name', 'review')
